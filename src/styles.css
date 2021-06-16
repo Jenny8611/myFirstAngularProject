@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2? family= Viaoda+Libre & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
 
 /* @import url('https://www.w3schools.com/w3css/4/w3.css');*/
 
@@ -9,5 +9,5 @@
 /*  */
 
 body {
-    font-family: 'Viaoda Libre', cursive;
+    font-family: 'Benne', serif;
 }
