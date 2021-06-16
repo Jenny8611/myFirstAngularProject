@@ -1,0 +1,15 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="conatainer-fluid">
+
+    <h1>My first Angular APP</h1>
+    <!-- On doit entourer les propriétés avec 2 accolades -->
+    <h2>{{title}}</h2>
+    <!-- On doit utiliser l'attribut(click) entre parenthèses
+pour appeler une méthode -->
+    <!-- (title) récupérer du fichier app.component.html ligne 11 -->
+    <button (click)="alert()">Click me {{nb}}</button>
+
+    <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

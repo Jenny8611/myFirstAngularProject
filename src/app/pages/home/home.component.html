@@ -1,0 +1,57 @@
+<h2>HERE IS MY HOME PAGE</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex earum, porro consequuntur illum veritatis voluptates placeat, et hic officia rerum laboriosam temporibus eligendi quod expedita culpa dolor, vel inventore? Aperiam.</p>
+
+<p><img [src]=" './assets/images/' + sourceImg" class="img-fluid" alt="" (click)="console(sourceImg)"></p>
+<p><img [src]=" './assets/images/' + jsonImg[randomIndex].url" class="img-fluid" [alt]="jsonImg[randomIndex].title" (mouseover)="changeRandom()" (mouseout)="changeRandom()"></p>
+
+<div class="row mt-3">
+    <h3>Dynamic style using [ngStyle]</h3>
+    <p [ngStyle]="{ 'color': valColor}" (click)="valColor='green';">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, explicabo. Deserunt illum ipsam officia veritatis, illo fugiat nobis expedita voluptatum magnam maiores numquam laudantium vitae, commodi laborum necessitatibus cum facilis.</p>
+</div>
+
+<div class="row mt-3">
+    <h3>Dynamic style using [ngClass]</h3>
+    <button class="btn-danger" (click)=" textPrimary=!textPrimary ">Change la couleur du pragraphe en bleu</button>
+    <p [ngClass]="{ 'text-primary': textPrimary}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, voluptatem neque impedit optio ducimus delectus, nesciunt necessitatibus deleniti maxime error, hic ad. Asperiores harum vitae omnis numquam nostrum sint quaerat.</p>
+</div>
+
+<div class="row mt-3">
+    <h3>Dynamic display *ngIf</h3>
+    <button class="btn-success" (click)=" displayParagraph=!displayParagraph ">Change le paragraphe par un autre</button>
+    <p *ngIf=" displayParagraph; else otherParagraph ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, explicabo. Deserunt illum ipsam officia veritatis, illo fugiat nobis expedita voluptatum magnam maiores numquam laudantium vitae, commodi laborum necessitatibus cum facilis.</p>
+
+
+    <ng-template #otherParagraph>
+        <p>Ce paragraphe a remplacé l'autre !!!</p>
+    </ng-template>
+</div>
+
+<div class="row mt-3">
+    <h3>Dynamic display [ngSwitch] *ngSwitchCase</h3>
+    <div [ngSwitch]="displaySwitch">
+        <p *ngSwitchCase="1">Salut !</p>
+        <p *ngSwitchCase="2">Tu vas ....</p>
+        <p *ngSwitchCase="3">... bien ?</p>
+    </div>
+    <button class="btn-primary" (click)="incSwitch()">Click to switch me !!</button>
+</div>
+
+<div class="row mt-3">
+    <h3>Dynamic display *ngFor</h3>
+    <ul class="row justify-content-start">
+        <li class="col-auto list-unstyled" *ngFor="let line of arrayImg">Line for {{line}}<br>
+            <img [src]=" './assets/images/' + line" width="100" />
+        </li>
+    </ul>
+
+</div>
+
+<div class="row mt-3">
+    <h3>Dynamic display *ngFor on json data</h3>
+    <ul class="row justify-content-start">
+        <li class="col-auto list-unstyled " *ngFor="let img of jsonImg">Line for {{img.title}}<br>
+            <img [src]=" './assets/images/' + img.url" width="80" /><br>
+            <span>{{img.author}}</span>
+        </li>
+    </ul>
+</div>
