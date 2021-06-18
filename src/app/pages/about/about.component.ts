@@ -17,14 +17,14 @@ export class AboutComponent implements OnInit {
   loadPics(way='', nb=this.page){
 
     // évalue la valeur de 'way'
-    // Et défini des cas pour 'next' et pour 'prev'
+    // et défini des cas pour 'next' et pour 'prev'
     switch(way){
       case'next':
         this.page++;
         break;
       case'prev':
     // seulement si page est sup à 0
-    // Enlève 1 à page sinon rien
+    // Enlève 1 à la page sinon rien
       this.page>0 ? this.page-- : null;
       break;
       case '':
