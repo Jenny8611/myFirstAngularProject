@@ -1,0 +1,14 @@
+<div class="card" style="width: 75vw;">
+    <img class="card-img-top" [src]="infoPhoto?.download_url" alt="Card image">
+    <div class="card-body">
+        <h5 class="card-title">This image got ID {{idPhoto}}</h5>
+        <h6>{{infoPhoto?.author}}</h6>
+        <ul class="list-group list-group-flush list-unstyled">
+            <li class="list-group-items">Width: {{infoPhoto?.width}}</li>
+            <li class="list-group-items">Height: {{infoPhoto?.height}}</li>
+            <li class="list-group-items">Url: <a [href]=" 'infoPhoto?.url' " _target="blank">{{infoPhoto?.url}}</a></li>
+            <li class="list-group-items text-center"><button class="btn btn-warning btn-lg" (click)="goBackToGallery()">Back to Gallery</button></li>
+        </ul>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content..</p>
+    </div>
+</div>

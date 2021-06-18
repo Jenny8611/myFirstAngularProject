@@ -17,7 +17,8 @@ export class AppComponent {
     // On peut déclarer des constantes et des variables
     //dans les méthodes
     const message = "This is a message";
-    alert(message);
+    /*alert(message);*/
+    
     //On peit utiliser tous les outils de javascript dans
     // les méthodes
     console.log(message);

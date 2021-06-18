@@ -11,6 +11,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { DetailsComponent } from './pages/details/details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    DetailsComponent,
     
     
     
@@ -28,9 +31,11 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
